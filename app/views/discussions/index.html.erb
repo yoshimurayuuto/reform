@@ -1,0 +1,13 @@
+<% @discussions.each do |discussion| %>
+  <p>名前:<%= discussion.name %></p>
+  <p>生年月日:<%= discussion.birthday %></p>
+  <p>過去:<%= discussion.past %></p>
+  <p>現在:<%= discussion.current %></p>
+  <p>未来:<%= discussion.future %></p>
+  <%= link_to "詳細", discussion_path(discussion.id) %>
+  <%= link_to "削除", discussion_path(discussion.id), method: :delete %>
+  <%= link_to "編集", edit_discussion_path(discussion.id) %>
+<% end %>
+<%= link_to "新規登録画面", users_signup_path %>
+<%= link_to "新規投稿", new_discussion_path %>
+

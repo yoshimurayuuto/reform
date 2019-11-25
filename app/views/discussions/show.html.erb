@@ -1,0 +1,11 @@
+<div class="container">
+  <%= @discussion.name %>
+
+  <div id="comments_area">
+    <%= render partial: "comments/index", locals: {comments: @comments, discussion: @discussion} %>
+  </div>
+  <%= render partial: "comments/form", locals: { comment: @comment, discussion: @discussion } %>
+
+  <%= link_to "編集", edit_discussion_path(@discussion) %>
+  <%= link_to "戻る", discussions_path %>
+</div>

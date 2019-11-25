@@ -1,0 +1,26 @@
+<%= form_with(model: @discussion, local: true) do |f| %>
+  <div>
+    <%= f.label :名前 %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :生年月日 %>
+    <%= f.date_select :birthday %>
+  </div>
+
+  <div>
+    <%= f.label :過去 %>
+    <%= f.text_field :past %>
+  </div>
+  <div>
+    <%= f.label :現在 %>
+    <%= f.text_field :current %>
+  </div>
+  <div>
+    <%= f.label :未来 %>
+    <%= f.text_field :future %>
+  </div>
+  <%= f.submit "編集" %>
+
+<% end %>
